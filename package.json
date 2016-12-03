@@ -1,0 +1,36 @@
+{
+  "name": "ts-dox",
+  "version": "0.1.0",
+  "description": "An opinionated documentation tool for JavaScript and TypeScript",
+  "contributors": [{ 
+      "name" : "Michael J. Bennett", 
+      "email" : "dev@michaeljbennett.info", 
+      "url" : "https://michaeljbennett.info/"
+  }],
+  "main": "dist/index.js",
+  "engines": { "node" : ">=0.10.3" },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bennett000/ts-dox.git"
+  },
+  "keywords": [
+    "documentation",
+    "generator",
+    "typescript",
+    "javascript",
+    "docs",
+    "doc",
+    "ts",
+    "js"
+  ],
+  "author": "Michael J. Bennett",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://waffle.io/bennett000/ts-dox"
+  },
+  "homepage": "https://github.com/bennett000/ts-dox#readme"
+}
+
