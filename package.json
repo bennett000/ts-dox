@@ -2,15 +2,32 @@
   "name": "ts-dox",
   "version": "0.1.0",
   "description": "An opinionated documentation tool for JavaScript and TypeScript",
-  "contributors": [{ 
-      "name" : "Michael J. Bennett", 
-      "email" : "dev@michaeljbennett.info", 
-      "url" : "https://michaeljbennett.info/"
-  }],
+  "contributors": [
+    {
+      "name": "Michael J. Bennett",
+      "email": "dev@michaeljbennett.info",
+      "url": "https://michaeljbennett.info/"
+    }
+  ],
   "main": "dist/index.js",
-  "engines": { "node" : ">=0.10.3" },
+  "engines": {
+    "node": ">=4"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "npm run clean:coverage && rimraf ./dist && rimraf ./ts",
+    "clean:coverage": "rimraf ./coverage",
+    "cover": "istanbul report --include ./ts/coverage.json",
+    "premocha": "npm run tsc",
+    "mocha": "mocha ts/**/*.js",
+    "mocha:w": "mocha -w ts/**/*.js",
+    "pretest": "npm run clean && npm run premocha",
+    "test": "istanbul cover _mocha -- -R spec ts/**/*.js",
+    "posttest": "npm run remap-istanbul && npm run clean:coverage && npm run cover",
+    "pretest:w": "npm run clean",
+    "remap-istanbul": "remap-istanbul -i ./coverage/coverage.json -o ./ts/coverage.json",
+    "test:w": "concurrently \"npm run mocha:w\" \"npm run tsc:w\"",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w"
   },
   "repository": {
     "type": "git",
@@ -31,6 +48,16 @@
   "bugs": {
     "url": "https://waffle.io/bennett000/ts-dox"
   },
-  "homepage": "https://github.com/bennett000/ts-dox#readme"
+  "homepage": "https://github.com/bennett000/ts-dox#readme",
+  "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/mocha": "^2.2.33",
+    "chai": "^3.5.0",
+    "concurrently": "^3.1.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "remap-istanbul": "^0.7.0",
+    "rimraf": "^2.5.4",
+    "typescript": "^2.0.10"
+  }
 }
-
