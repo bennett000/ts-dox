@@ -1,5 +1,7 @@
 # ts-dox
 
+[![Build Status](https://travis-ci.org/bennett000/ts-dox.svg?branch=master)](https://travis-ci.org/bennett000/ts-dox)
+
 ts-dox is an opinionated tool for documenting JavaScript or TypeScript programmes.
 
 Simply run ts-dox in a directory that has JavaScript/TypeScript files or has sub-directories that have JavaScript/TypeScript folders.  By default the programme will output to the `docs` directory in your current working directory.  For example:
