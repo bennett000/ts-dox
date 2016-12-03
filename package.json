@@ -11,7 +11,7 @@
   ],
   "main": "dist/index.js",
   "engines": {
-    "node": ">=0.10.3"
+    "node": ">=4"
   },
   "scripts": {
     "clean": "npm run clean:coverage && rimraf ./dist && rimraf ./ts",
