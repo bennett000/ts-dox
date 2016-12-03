@@ -1,0 +1,19 @@
+{
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es5",
+    "noImplicitAny": true,
+    "outDir": "ts",
+    "removeComments": false,
+    "sourceMap": true
+  },
+  "exclude": [
+    "coverage",
+    "dist",
+    "lib",
+    "node_modules"
+  ]
+}
