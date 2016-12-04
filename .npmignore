@@ -6,6 +6,7 @@ ts/
 .gitignore
 .travis.yml
 CODE_OF_CONDUCT.md
+compile.js
 CONTRIBUTING.md
 rollup.config.js
 tsconfig.json
