@@ -1,9 +1,12 @@
+coverage/
+node_modules/
+src/
+tmp/
+ts/
 .gitignore
 .travis.yml
-coverage/
-src/
-ts/
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
+rollup.config.js
 tsconfig.json
 tslint.json
